@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS outbound_db;
+CREATE DATABASE outbound_db;

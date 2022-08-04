@@ -1,4 +1,4 @@
-/* const express = require('express');
+const express = require('express');
 const router = express.Router();
 const apiRoutes = require("./api")
 
@@ -37,4 +37,4 @@ router.get("/logout",(req,res)=>{
 
 router.use("/api",apiRoutes)
 
-module.exports = router; */
+module.exports = router

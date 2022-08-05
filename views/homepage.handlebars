@@ -1,0 +1,10 @@
+<h1>Homepage</h1>
+<h3>All Gears:</h3>
+{{#each gears}}
+<div class="card">
+    <h3><a href="/gears/{{id}}">{{id}}. {{name}} by {{user.name}}</a></h3>
+    <h5>Created on: {{date_created}}</h5>
+    <p>{{description}}</p>
+    <hr>
+</div>
+{{/each}}

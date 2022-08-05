@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1",
+        "category_name":"Hiking Backpack"
+    },
+    {
+        "id":"2",
+        "category_name":"Tent"
+    },
+    {
+        "id":"3",
+        "category_name":"Flashlight"
+    },
+    {
+        "id":"4",
+        "category_name":"Jet Boil"
+    },
+    {
+        "id":"5",
+        "category_name":"Day Pack"
+    }
+]

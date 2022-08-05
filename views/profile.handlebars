@@ -1,0 +1,16 @@
+<h1>Welcome back, {{name}}</h1>
+<h2>My Gears</h2>
+{{#each gears}}
+    <a href="/gears/{{id}}">{{name}}</a>
+    <button class="del-btn" data-id="{{id}}">Delete</button>
+    <hr>
+{{/each}}
+
+<h2>Add a Gear</h2>
+<form action="" id="new-gear">
+    <input type="text" id="name" placeholder="name">
+    <textarea id="description" placeholder="description"></textarea>
+    <button>Create</button>
+</form>
+<script src="/js/newGear.js"></script>
+<script src="/js/delBtn.js"></script>

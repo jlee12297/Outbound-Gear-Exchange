@@ -5,5 +5,7 @@
 }
 
 body {
-    background-image: url("../images/Two Kayaks.jpg")
+    background-image: url("../images/Hike-view.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

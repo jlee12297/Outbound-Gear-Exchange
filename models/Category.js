@@ -12,7 +12,7 @@ Category.init(
             autoIncrement: true,
         },
         category_name: {
-            type: DataType.VARCHAR(50),
+            type: DataTypes.STRING,
             allowNull: false,
         } 
 

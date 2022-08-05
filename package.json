@@ -1,21 +1,23 @@
 {
-  "name": "outbound-gear-exchange",
+  "name": "tech-blog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jlee12297/Outbound-Gear-Exchange.git"
+    "url": "git+https://github.com/jlee12297/tech-blog.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jlee12297/Outbound-Gear-Exchange/issues"
+    "url": "https://github.com/jlee12297/tech-blog/issues"
   },
-  "homepage": "https://github.com/jlee12297/Outbound-Gear-Exchange#readme",
+  "homepage": "https://github.com/jlee12297/tech-blog#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
@@ -23,7 +25,6 @@
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
-    "materialize-css": "^1.0.0-rc.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.3"
   }

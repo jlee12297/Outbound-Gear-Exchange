@@ -1,45 +1,15 @@
-const Gear = require('./Gear');
 const User = require('./User');
+const Gear = require('./Gear');
 const Orders =require('./Orders');
 const Category = require('./Category');
 
-
-
-User.hasMany(Orders,{
-    foreignKey:'order_id'
-});
-
-Orders.belongsTo(User, {
-    foreignKey: 'adventurer_id'
-});
-
-Orders.belongsTo(Gear, {
-    foreignKey: 'gear_id'
-});
-
-Gear.hasMany(Orders, {
-    foreignKey: 'order_id'
+User.hasMany(Gear, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
 Gear.belongsTo(User, {
-    foreignKey: 'gearhead_id'
+  foreignKey: 'user_id'
 });
 
-User.hasMany(Gear, {
-    foreignKey: 'gear_id'
-});
-
-Category.belongsTo(Gear, {
-    foreignKey: 'gear_id'
-});
-
-Gear.hasMany(Category, {
-    foreignKey: 'category_id'
-});
-
-module.exports = {
-    Gear,
-    User,
-    Orders,
-    Category
-}
+module.exports = { User, Gear, Orders, Category };

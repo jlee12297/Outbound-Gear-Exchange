@@ -28,7 +28,7 @@ Orders.init(
             allowNull: false
         },
         gear_id: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         }
 

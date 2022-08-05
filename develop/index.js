@@ -5,7 +5,3 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Collapsible.init(elems, options);
     
   });
-
-  $(document).ready(function(){
-    $('.collapsible').collapsible();
-  });

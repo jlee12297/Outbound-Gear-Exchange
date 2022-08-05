@@ -1,0 +1,34 @@
+[
+    {
+        "id":"1",
+        "user_name":"Kristen Santee",
+        "customer_id":"Tom Foolery",
+        "start_date":"8/29/2022",
+        "end_date":"9/3/2022",
+        "gear_id":""
+    },
+    {
+        "id":"2",
+        "user_name":"Josh Lee",
+        "customer_id":"Tom Foolery",
+        "start_date":"8/29/2022",
+        "end_date":"9/3/2022",
+        "gear_id":""
+    },
+    {
+        "id":"1",
+        "user_name":"Leslie Saucedo",
+        "customer_id":"Tom Foolery",
+        "start_date":"8/29/2022",
+        "end_date":"9/3/2022",
+        "gear_id":""
+    },
+    {
+        "id":"2",
+        "user_name":"Stevie Gomez",
+        "customer_id":"Tom Foolery",
+        "start_date":"8/29/2022",
+        "end_date":"9/3/2022",
+        "gear_id":""
+    }
+]

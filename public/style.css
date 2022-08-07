@@ -13,12 +13,17 @@
 }
 
 body {
-    background-image: url("../images/Rachel-lake-view.JPG");
+    background-image: url("../images/tent-cluster.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+
+#gear-cache{
+    font-family: 'Amatic SC', cursive;
+    font-size:4vh;
 }
 
 main {

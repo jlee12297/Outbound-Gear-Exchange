@@ -4,11 +4,10 @@ const {User,Gear} = require('../models');
 
 router.get("/",(req,res)=>{
     res.render("landingpage",{
-            logged_in:req.session.logged_in
+        logged_in:req.session.logged_in
         })
-    })
+})
 
-//changed route to homepage to "/home" from "/""
 router.get("/home",(req,res)=>{
     Gear.findAll({
         include:[User]

@@ -9,7 +9,7 @@ User.hasMany(Gear, {
 });
 
 Gear.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: 'user_id',
 });
 
 module.exports = { User, Gear, Orders, Category };

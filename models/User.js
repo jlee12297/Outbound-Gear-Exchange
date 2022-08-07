@@ -39,6 +39,10 @@ User.init(
         len: [8],
       },
     },
+    gear_id: {
+      type: DataTypes.STRING,
+      allowNull: true
+    }
   },
   {
     hooks: {

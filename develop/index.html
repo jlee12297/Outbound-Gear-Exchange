@@ -8,7 +8,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Josefin+Sans&display=swap"
@@ -28,31 +28,20 @@
     <main>
         <br><br><br>
         <div class="container" id="accent-font">
-            <div class="row indigo lighten-1 white-text col s6 brand-logo center" id="gear-cache">My Gear Cache<a href="#"
-                    class="btn indigo lighten-1 btn-large right align"><i class="small material-icons">add</i></a></div>
-            <div class="card horizontal">
-                <div class="card-image">
-                    <img src="https://picsum.photos/200/300">
+            <form action="" id="signup">
+                <div class="input-field">
+                    <input type="text" name="gear-name" id="gear-name">
+                    <label class="active" for="gear-name">name</label>
                 </div>
-                <div class="card-stacked">
-                    <div class="card-content indigo-text">
-                            <ul>
-                            <li>Gear Id:</li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li>Name:</li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li>Description:</li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li>Date Added:</li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li>User:</li>
-                            <li class="divider" tabindex="-1"></li>
-                                <button class="btn btn-small red right align"><i class="material-icons left">delete</i>Delete Gear</button>
-                                    <button class="btn btn-small orange right align"><i class="material-icons left">sync</i>Update Gear</button>
-                        </ul>
-                    </div>
+                <div class="input-field">
+                    <input type="text" name="gear-description" id="gear-description">
+                    <label class="active" for="gear-description">description</label>
                 </div>
-            </div>
+                <button class="btn btn-small orange right align"><i
+                    class="material-icons left">add</i>Add Item</button>
+            <button class="btn btn-small blue right align"><i
+                    class="material-icons left">add_a_photo</i>Upload Photo</button>
+            </form>
         </div>
 
     </main>

@@ -1,9 +1,20 @@
-<header>
-        {{#if logged_in}}
-        <a href="/profile">Profile</a>
-        <button id="logout">Logout</button>
-        {{!-- commented out, was posting login/signup on landing page --}}
-        {{!-- {{else}}
-        <a href="/login">Login/signup</a> --}}
-        {{/if}}
-    </header>
+ {{!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons orange-text">menu</i></a>
+<ul id="slide-out" class="sidenav">
+        {{!-- <li>
+            <div class="user-view">
+        </li> --}}
+        <li><a href="/" class="indigo-text"><i class="material-icons indigo-text">home</i>Home</a></li>
+        <li><a href="/profile" class="indigo-text"><i class="material-icons indigo-text">face</i>Profile</a></li>
+        {{!-- need routing for log out --}}
+        <li><a href="/" class="indigo-text"><i class="material-icons indigo-text">close</i>Log Out</a></li>
+    </ul> --}}
+    {{!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons orange-text">menu</i></a> --}}
+
+
+    {{#if logged_in}}
+    {{!-- <a href="/profile">Profile</a>
+    <button id="logout">Logout</button> --}}
+    {{!-- {{else}}
+    <a href="/login">Login/signup</a> --}}
+    {{/if}}
+

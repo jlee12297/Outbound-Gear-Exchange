@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {User,Gear} = require('../models');
+const {User,Gear,Category} = require('../models');
 
 router.get("/",(req,res)=>{
     res.render("landingpage",{
@@ -49,6 +49,23 @@ router.get("/viewmygear",(req,res)=>{
         console.log(hbsData)
         hbsData.logged_in=true;
         res.render("gearCache",hbsData)
+    })
+})
+
+
+router.get("/search",(req,res)=>{
+    if(!req.session.logged_in) {
+        res.redirect("/")
+    }
+    Gear.findAll({
+        include:[User,Category]
+    }).then(data=>{
+        const hbsData = data.map(gear=>gear.toJSON())
+        console.log(hbsData)
+        res.render("search",{
+            gears:hbsData,
+            logged_in:req.session.logged_in
+        })
     })
 })
 

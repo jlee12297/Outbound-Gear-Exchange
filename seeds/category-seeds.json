@@ -1,22 +1,48 @@
 [
     {
         "id":"1",
-        "category_name":"Hiking Backpack"
+        "category_name":"Hiking"
     },
     {
         "id":"2",
-        "category_name":"Tent"
+        "category_name":"Camping"
     },
+
     {
         "id":"3",
-        "category_name":"Flashlight"
+        "category_name":"Skiing"
     },
     {
         "id":"4",
-        "category_name":"Stove"
+        "category_name":"Rock Climbing"
     },
     {
         "id":"5",
-        "category_name":"Day Pack"
+        "category_name":"Cycling"
+    },
+    {
+        "id":"6",
+        "category_name":"Snowboarding"
+    },
+    {
+        "id":"7",
+        "category_name":"Conoeing"
+    },
+    {
+        "id":"8",
+        "category_name":"Paddle boarding"
+    },
+    {
+        "id":"9",
+        "category_name":"Fishing"
+    },
+    {
+        "id":"10",
+        "category_name":"Snow Shoeing"
+    },
+    {
+        "id":"11",
+        "category_name":"Kayaking"
     }
+    
 ]

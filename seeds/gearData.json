@@ -1,18 +1,83 @@
 [
   {
     "name": "Patagonia Backpack",
+    "category_id":1,
     "description": "Waterproof Hiking Backpack made by Patagonia",
     "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899116/ljdgmnqrqawcwe2ic0kr.jpg"
   },
   {
     "name": "Kayak",
+    "category_id":11,
     "description": "2 man blue kayak, no paddles included",
     "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899135/je1ficijc30k7ent4mbj.jpg"
 
   },
   {
     "name": "Coleman Grill",
+    "category_id":2,
     "description": "Gas canister powered grill, for cooking outdoors!",
     "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/zixnmvykjfnbyso1kr5m.jpg"
-  }
+  },
+  {
+    "name": "Snow Shoes",
+    "category_id":10,
+    "description": "Yukon Charlies Snow shoes, for snowshoeing! "
+   
+  },
+  {
+    "name": "car rack",
+    "category_id":11,
+    "description": "car rack great used for carrying bulky equiments"
+
+  },
+  {
+    "name": "Tent",
+    "category_id":2,
+    "description": "REI gray 4 person tent! Great for camping! "
+  },
+  {
+    "name": "Camping Laterns",
+    "category_id":2,
+    "description": "LED camping latern ! Perfect for outdoor activities! "
+  },
+  {
+    "name": "Sleeping Pads",
+    "category_id":2,
+    "description": "Sea to Summit sleeping pad for camping  "
+  },
+  {
+    "name": "Conoe",
+    "category_id":7,
+    "description": "Forest green conoe "
+  },
+  {
+    "name": "Life vest",
+    "category_id":7,
+    "description": "Size Medium Life vest  "
+  },
+  {
+    "name": "Snowboards",
+    "category_id":6,
+    "description": "Burton Women snowboard  "
+  },
+  {
+    "name": "Paddle Boarding",
+    "category_id":8,
+    "description": "Blue Paddle board! Great for summer ! "
+  },
+  {
+    "name": "Fishing poles",
+    "category_id":9,
+    "description": "Fishing pole  "
+  },
+  {
+    "name": "Ski poles",
+    "category_id":3,
+    "description": "Black Diamond ski poles  "
+  },
+  {
+    "name": "Trekking poles",
+    "category_id":1,
+    "description": "Black Diamond trail trekking poles. Great for Hiking! "
+  }  
 ]

@@ -4,24 +4,25 @@
             <div class="row indigo lighten-1 white-text col s6 brand-logo center" id="gear-cache">My Gear Cache<a
                     href="#" class="btn indigo lighten-1 btn-large right align"><i
                         class="small material-icons">add</i></a></div>
+
+            {{#each gears}}    
             <div class="card horizontal">
                 <div class="card-image">
-                    <img src="https://picsum.photos/200/300">
+                    <img src="{{image}}" alt="Gear Image">
                 </div>
                 <div class="card-stacked">
                     <div class="card-content indigo-text">
                         <ul>
-                            <li>Gear Id:</li>
+                            <li>Gear Id: {{id}}</li>
                             <li class="divider" tabindex="-1"></li>
-                            <li>Name:</li>
+                            <li>Name: {{name}}</li>
                             <li class="divider" tabindex="-1"></li>
-                            <li>Description:</li>
+                            <li>Description: {{description}}</li>
                             <li class="divider" tabindex="-1"></li>
-                            <li>Date Added:</li>
+                            <li>Date Added: {{date_created}}</li>
                             <li class="divider" tabindex="-1"></li>
-                            <li>User:</li>
                             <li class="divider" tabindex="-1"></li>
-                            <button class="btn btn-small red right align"><i
+                            <button class="btn btn-small red right align del-btn" data-id="{{id}}"><i
                                     class="material-icons left">delete</i>Delete Gear</button>
                             <button class="btn btn-small orange right align"><i
                                     class="material-icons left">sync</i>Update Gear</button>
@@ -29,5 +30,10 @@
                     </div>
                 </div>
             </div>
+            {{/each}}
+
+
         </div>
     </main>
+
+    <script src="/js/delBtn.js"></script>

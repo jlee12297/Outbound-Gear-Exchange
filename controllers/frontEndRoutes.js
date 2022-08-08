@@ -49,4 +49,18 @@ router.get("/profile",(req,res)=>{
     })
 })
 
+router.get("/addgear",(req,res)=>{
+    if(!req.session.logged_in) {
+        res.redirect("/login")
+    }
+    User.findByPk(req.session.user_id,{
+        include:[Gear]
+    }).then(userData=>{
+        const hbsData = userData.toJSON();
+        console.log(hbsData)
+        hbsData.logged_in=true;
+        res.render("addGear",hbsData)
+    })
+})
+
 module.exports = router;

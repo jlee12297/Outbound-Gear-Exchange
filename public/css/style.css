@@ -20,10 +20,16 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
-
+/* gearCache.handlebars */
 #gear-cache{
     font-family: 'Amatic SC', cursive;
     font-size:4vh;
+}
+
+/* addGear.handlebars */
+#form-font{
+    font-family: 'Amatic SC', cursive;
+    font-size:3vh;
 }
 
 main {

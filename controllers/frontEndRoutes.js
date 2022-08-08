@@ -20,7 +20,7 @@ router.get("/home",(req,res)=>{
     })
 })
 
-router.get("/viewmygear",(req,res)=>{
+/* router.get("/viewmygear",(req,res)=>{
     if(!req.session.logged_in) {
         res.redirect("/")
     }
@@ -28,12 +28,31 @@ router.get("/viewmygear",(req,res)=>{
         include:[User]
     }).then(data=>{
         const hbsData = data.map(gear=>gear.toJSON())
+        console.log(hbsData)
         res.render("gearCache",{
             gears:hbsData,
             logged_in:req.session.logged_in
         })
     })
 })
+
+*/
+
+router.get("/viewmygear",(req,res)=>{
+    if(!req.session.logged_in) {
+        res.redirect("/")
+    }
+    User.findByPk(req.session.user_id,{
+        include:[Gear]
+    }).then(userData=>{
+        const hbsData = userData.toJSON();
+        console.log(hbsData)
+        hbsData.logged_in=true;
+        res.render("gearCache",hbsData)
+    })
+})
+
+
 
 router.get("/gears/:id",(req,res)=>{
     Gear.findByPk(req.params.id).then(gearData=>{

@@ -18,6 +18,9 @@ Gear.init(
     description: {
       type: DataTypes.STRING,
     },
+    image: {
+      type: DataTypes.STRING,
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,

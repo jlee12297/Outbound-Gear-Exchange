@@ -3,6 +3,7 @@ document.querySelector("#new-gear").addEventListener("submit",e=>{
     const gearObj = {
         name:document.querySelector("#name").value,
         description:document.querySelector("#description").value,
+        image:document.querySelector("#uploadedimage").src,
     }
     console.log(gearObj)
     fetch("/api/gears",{

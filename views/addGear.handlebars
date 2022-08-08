@@ -1,12 +1,14 @@
-<h1>Welcome back, {{name}}</h1>
+<h1>Welcome, {{name}}</h1>
 <h2>My Gears</h2>
+
+{{!-- replace this each section with a confirmation of successful add of last item--}}
 {{#each gears}}
     <a href="/gears/{{id}}">{{name}}</a>
     <button class="del-btn" data-id="{{id}}">Delete</button>
     <hr>
 {{/each}}
 
-<!-- ADD A GEAR PAGE STARTS HERE -->
+
 
 <h2>Add a Gear</h2>
 <form action="" id="new-gear">
@@ -40,12 +42,8 @@
      type="text/javascript">
     </script>
 
- 
-<!-- ADD A GEAR PAGE END HERE -->
-    
 
-
-{{!-- copied from index.html which I used as a sandbox --}}
+    {{!-- copied from index.html which I used as a sandbox --}}
     <main>
         <br><br><br>
         {{!-- Dropdown Trigger --}}
@@ -92,6 +90,6 @@
                 </div>
 
     </main>
+    
 <script src="/js/newGear.js"></script>
-<script src="/js/delBtn.js"></script>
 <script> src="/js/upload_widget.js"</script>

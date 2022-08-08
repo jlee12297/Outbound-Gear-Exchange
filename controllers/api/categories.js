@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Gear,User } = require('../../models');
-const { routes } = require('./userRoutes')
+const { Category } = require('../../models');
+const { routes } = require('./userRoutes');
 
 router.get("/",async (req,res)=>{
   try {
-    const Gears = await Gear.findAll();
-    res.json(Gears)
+    const category = await Category.findAll();
+    res.json(category)
   }catch (err) {
     res.status(400).json(err);
   }
@@ -13,18 +13,13 @@ router.get("/",async (req,res)=>{
 
 router.get('/:id', async (req,res) => {
   try {
-    const GearData = await Gear.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-        }
-      ]
+    const categoryData = await Category.findByPk(req.params.id, {
     });
-    if(!GearData) {
-      res.status(404).json({msg: "No gear with this ID"});
+    if(!categoryData) {
+      res.status(404).json({msg: "No category with this ID"});
       return;
     }
-    res.status(200).json(GearData);
+    res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -32,15 +27,15 @@ router.get('/:id', async (req,res) => {
 
 router.post('/', async (req, res) => {
   if(!req.session.logged_in){
-    res.status(403).json({msg:"You must be logged in to add gear to your cache!"})
+    res.status(403).json({msg:"You must be logged in to add a gear category!"})
   }
   try {
-    const newGear = await Gear.create({
+    const newCategory = await Category.create({
       ...req.body,
-      user_id: req.session.user_id,
+      category_name: req.session.category_name,
     });
 
-    res.status(200).json(newGear);
+    res.status(200).json(newCategory);
   } catch (err) {
     res.status(400).json(err);
   }

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {User,Gear} = require('../models');
+const {User,Gear,Category} = require('../models');
 
 router.get("/",(req,res)=>{
     res.render("landingpage",{
@@ -57,13 +57,15 @@ router.get("/search",(req,res)=>{
     if(!req.session.logged_in) {
         res.redirect("/")
     }
-    User.findByPk(req.session.user_id,{
-        include:[Gear]
-    }).then(userData=>{
-        const hbsData = userData.toJSON();
+    Gear.findAll({
+        include:[User,Category]
+    }).then(data=>{
+        const hbsData = data.map(gear=>gear.toJSON())
         console.log(hbsData)
-        hbsData.logged_in=true;
-        res.render("search",hbsData)
+        res.render("search",{
+            gears:hbsData,
+            logged_in:req.session.logged_in
+        })
     })
 })
 

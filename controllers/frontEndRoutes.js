@@ -53,6 +53,21 @@ router.get("/viewmygear",(req,res)=>{
 })
 
 
+router.get("/search",(req,res)=>{
+    if(!req.session.logged_in) {
+        res.redirect("/")
+    }
+    User.findByPk(req.session.user_id,{
+        include:[Gear]
+    }).then(userData=>{
+        const hbsData = userData.toJSON();
+        console.log(hbsData)
+        hbsData.logged_in=true;
+        res.render("search",hbsData)
+    })
+})
+
+
 
 router.get("/gears/:id",(req,res)=>{
     Gear.findByPk(req.params.id).then(gearData=>{

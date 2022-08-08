@@ -1,14 +1,18 @@
 [
   {
     "name": "Patagonia Backpack",
-    "description": "Waterproof Hiking Backpack made by Patagonia"
+    "description": "Waterproof Hiking Backpack made by Patagonia",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899116/ljdgmnqrqawcwe2ic0kr.jpg"
   },
   {
     "name": "Kayak",
-    "description": "2 man blue kayak, no paddles included"
+    "description": "2 man blue kayak, no paddles included",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899135/je1ficijc30k7ent4mbj.jpg"
+
   },
   {
     "name": "Coleman Grill",
-    "description": "Gas canister powered grill, for cooking outdoors!"
+    "description": "Gas canister powered grill, for cooking outdoors!",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/zixnmvykjfnbyso1kr5m.jpg"
   }
 ]

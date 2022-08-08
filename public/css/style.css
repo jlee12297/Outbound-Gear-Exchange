@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.brand-logo {
+    font-family: 'Amatic SC', cursive;
+}
+
+#accent-font {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-image: url("../images/tent-cluster.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#gear-cache{
+    font-family: 'Amatic SC', cursive;
+    font-size:4vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    height: 5vh;
+}
+
+/* .fill-view {
+    min-height: calc(100vh);
+} */

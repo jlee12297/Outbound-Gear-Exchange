@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Josefin+Sans&display=swap"
+        rel="stylesheet">
     <title>Outbound Gear Exchange</title>
 </head>
 
@@ -25,61 +26,35 @@
     </header>
     <br><br><br><br>
     <main>
-        <div class="container" id="collapsible">
-            <ul class="collapsible popout z-depth-1">
-                <li>
-                    <div class="collapsible-header indigo-text"><i class="material-icons indigo-text">landscape</i>About
-                        Outbound</div>
-                    <div class="collapsible-body white"><span class="flow-text">Lorem ipsum dolor sit amet. A little
-                            chunk.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header indigo-text"><i
-                            class="material-icons indigo-text">flight_takeoff</i>Login</div>
-                    <div class="collapsible-body white"><span>
-                            <form action="" id="login">
-                                <div class="input-field">
-                                    <input type="text" name="login-email" id="login-email">
-                                    <label class="active" for="login-email">email</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="password" name="login-password" id="login-password">
-                                    <label class="active" for="login-password">password</label>
-                                </div>
-                                <div>
-                                    <button class="btn waves-effect deep-purple lighten-2">Login</button>
-                                </div>
-                            </form>
-                        </span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header indigo-text"><i class="material-icons indigo-text">highlight</i>Sign
-                        Up &
-                        Explore</div>
-                    <div class="collapsible-body white"><span>
-                            <form action="" id="signup">
-                                <div class="input-field">
-                                    <input type="text" name="signup-name" id="signup-name">
-                                    <label class="active" for="signup-name">name</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="text" name="signup-location" id="signup-location">
-                                    <label class="active" for="signup-location">location (city, state)</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="text" name="signup-email" id="signup-email">
-                                    <label class="active" for="signup-email">email</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="password" name="signup-password" id="signup-password">
-                                    <label class="active" for="signup-password">password</label>
-                                </div>
-                                <button class="btn waves-effect deep-purple lighten-2">Signup</button>
-                            </form>
-                        </span></div>
-                </li>
-            </ul>
+        <br><br><br>
+        <div class="container" id="accent-font">
+            <div class="row indigo lighten-1 white-text col s6 brand-logo center" id="gear-cache">My Gear Cache<a href="#"
+                    class="btn indigo lighten-1 btn-large right align"><i class="small material-icons">add</i></a></div>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/300">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content indigo-text">
+                            <ul>
+                            <li>Gear Id:</li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li>Name:</li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li>Description:</li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li>Date Added:</li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li>User:</li>
+                            <li class="divider" tabindex="-1"></li>
+                                <button class="btn btn-small red right align"><i class="material-icons left">delete</i>Delete Gear</button>
+                                    <button class="btn btn-small orange right align"><i class="material-icons left">sync</i>Update Gear</button>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </main>
     <footer class="page-footer z-depth-1 lime">
     </footer>
@@ -91,3 +66,8 @@
 </body>
 
 </html>
+
+<!-- <div class="input-field">
+    <input type="text" name="signup-email" id="signup-email">
+    <label class="active" for="signup-email">email</label>
+</div> -->

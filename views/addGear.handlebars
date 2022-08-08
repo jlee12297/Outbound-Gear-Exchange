@@ -1,41 +1,89 @@
-<h1>Welcome, {{name}}</h1>
-<h2>My Gears</h2>
-
-{{!-- replace this each section with a confirmation of successful add of last item--}}
-{{#each gears}}
-<a href="/gears/{{id}}">{{name}}</a>
-<button class="del-btn" data-id="{{id}}">Delete</button>
-<hr>
-{{/each}}
-
-
-
-<h2>Add Item</h2>
 <main>
-    <br><br><br>
+   {{!-- WELCOME MESSAGE HIDDEN ON MOBILE --}}
+    <div class="container col offset-1">
+        <div class="row">
+        <div class="col s12 m6">
+        <div class="card-panel lime hide-on-small-only">
+            <div class="card-content indigo-text accent-font">
+            <span class="card-title"><h2>Welcome, {{name}}!</h2></span>
+            <h4>Let's add some gear.</h4>
+            </div>
+        </div>
+        </div>
+    </div>
+{{!-- GEAR AT A GLANCE SECTION --}}
+    <div class="container">
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header orange">
+                    <i class="material-icons grey-text text-darken-4">more_vert</i><span id="my-gear" class="grey-text text-darken-4 accent-font">Gear at a Glance</span>
+                </div>
+                <div class="collapsible-body orange lighten-3">
+                    <span>
+                    {{#each gears}}
+                    <a href="" class="btn del-btn orange darken-4" data-id="{{id}}"><i class="material-icons right-align">delete</i></a>
+                    <a class="indigo-text accent-font" href="/gears/{{id}}">{{name}}</a>
+                    <hr>
+                    {{/each}}
+                    </span>
+                </div>
+            </li>
+
+            {{!-- <div class="card col s12 m6">
+                <div class="waves-effect waves-block waves-light">
+                </div>
+                <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">My Gear <i class="material-icons">build</i></span>
+                </div>
+                <div class="card-reveal ">
+                <span class="card-title grey-text text-darken-4">Gear at a Glance<i class="material-icons right">close</i></span>
+                <p>
+                    </p>
+                </div>
+            </div> --}}
+        </ul>
+    </div>
+    </div>
+
+{{!-- ADD GEAR SECTION --}}
+    <br>
     <div class="container white">
         <div class="row indigo-text brand-logo center">
             <form action="" id="new-gear">
                 <br>
-                <div class="input-field col s9 offset-s1">
-                    <input type="text" name="gear-name" id="gear-name">
-                    <label class="active" for="gear-name" id="form-font">enter name</label>
-                </div>
-                <div class="input-field col s9 offset-s1">
-                    <input type="text" name="gear-description" id="gear-description">
-                    <label class="active" for="gear-description" id="form-font">enter description</label>
-                </div>
+                {{!-- ADD DROPDOWN --}}
                 <div>
-                    <button class="btn btn-small orange right align"><i class="material-icons left">add</i>Add Item</button>
+                    <a class="dropdown-trigger btn btn-large deep-purple lighten-2" href="#" data-target="dropdown2" id="accent-font">what category of gear are you adding?<i class="material-icons right">expand_more</i></a>
+                    <ul class="dropdown-content" id="dropdown2">
+                        <span>{{#each categories}}
+                        <li>{{category}}</li>
+                        {{/each}}
+                        </span>
+                        <hr>
+                        <li>Tents</li>
+                        <li>Snowshoes</li>
+                        <li>Kayaks</li>
+                    </ul>
                 </div>
-                <div>
-                    <button class="btn btn-small blue right align"><i class="material-icons left">add_a_photo<i>Upload Photo</button>
+                <div class="input-field col s9 offset-s2">
+                    <input type="text" name="name" id="name">
+                    <label class="active" for="name" id="form-font">what gear do you want to add?</label>
                 </div>
+                <div class="input-field col s9 offset-s2">
+                    <textarea type="text" name="description" id="description" class="materialize-textarea"></textarea>
+                    <label class="active" for="description" id="form-font">How would you describe it? Think brand, size, and features</label>
+                </div>
+                <img id="uploadedimage" src=""></img>
+                <button class="btn btn-large waves-effect waves-lighten indigo lighten-2 white-text"><a href="#" id="upload_widget"><i class="material-icons left white-text">add_a_photo</i>upload</a></button>                    
+                <button class=" btn-large waves-effect waves-lighten orange"><i class="material-icons left">add</i>add gear</button>
+                {{!-- <div class="center">
+                    <a href="#" class="btn">clear</a>
+                </div> --}}
         </div>
         <br>
         </form>
     </div>
-</main>
+</div>
 {{!-- <form action="" id="new-gear">
     <input type="text" id="name" placeholder="name">
     <textarea id="description" placeholder="description"></textarea>
@@ -44,9 +92,9 @@
 </form> --}}
 
 {{!-- cloudinary widget --}}
-<button id="upload_widget" class="cloudinary-button">
+{{!-- <button id="upload_widget" class="cloudinary-button">
     Upload files
-</button>
+</button> --}}
 
 <!-- placeholder for uploaded image -->
 <img id="uploadedimage" src="">
@@ -61,7 +109,6 @@
 
 
 {{!-- copied from index.html which I used as a sandbox --}}
-<main>
     <br><br><br>
     {{!-- Dropdown Trigger --}}
     <div class="container center-align">

@@ -20,6 +20,21 @@ router.get("/home",(req,res)=>{
     })
 })
 
+router.get("/viewmygear",(req,res)=>{
+    if(!req.session.logged_in) {
+        res.redirect("/")
+    }
+    Gear.findAll({
+        include:[User]
+    }).then(data=>{
+        const hbsData = data.map(gear=>gear.toJSON())
+        res.render("gearCache",{
+            gears:hbsData,
+            logged_in:req.session.logged_in
+        })
+    })
+})
+
 router.get("/gears/:id",(req,res)=>{
     Gear.findByPk(req.params.id).then(gearData=>{
         const hbsData = gearData.toJSON();

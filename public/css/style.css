@@ -4,8 +4,15 @@
     padding: 0;
 }
 
-.brand-logo {
+/* .brand-logo {
     font-family: 'Amatic SC', cursive;
+} */
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
 }
 
 #accent-font {
@@ -29,7 +36,22 @@ body {
 /* addGear.handlebars */
 #form-font{
     font-family: 'Amatic SC', cursive;
-    font-size:3vh;
+    font-size: large;
+    /* font-size:2vh; */
+}
+
+.dropdown-content {
+    font-size: 2vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#upload-widget {
+    color: white;
+}
+
+#my-gear {
+    /* font-size:2.5vh; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: x-large;
 }
 
 main {
@@ -40,13 +62,40 @@ footer {
     height: 5vh;
 }
 
-#upload-widget {
-    color: white;
+@media screen and (max-width:576px) {
+    h1 {
+        padding-top: 2vh;
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+    #form-font{
+        font-family: 'Amatic SC', cursive;
+        font-size: medium;
+        /* font-size:2vh; */
+    }
+/* placeholder not reactive yet */
+    #placeholder{
+        font-size: 2rem;
+    }
 }
 
-#my-gear {
-    font-size:3vh;
-}
 /* .fill-view {
     min-height: calc(100vh);
 } */
+
+/* @media #{$small-and-down} {
+    // styles for small screens and down
+  }
+  @media #{$medium-and-up} {
+    // styles for medium screens and larger
+  }
+  @media #{$medium-and-down} {
+    // styles for medium screens and down
+  }
+  @media #{$large-and-up} {
+    // styles for large screens and up
+  }
+  @media #{$extra-large-and-up} {
+    // styles for extra large screens and up
+  }
+           */

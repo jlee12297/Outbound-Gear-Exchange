@@ -4,17 +4,41 @@
     
     <br><br>
 
-    <nav>
-        <div class="nav-wrapper white">
-            <form>
-                <div class="input-field">
-                    <input id="search" type="search" required>
-                    <label for="search" class="label-icon orange"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
-                </div>
-            </form>
-        </div>
-    </nav>
+      <div>
+                        <a class="dropdown-trigger btn btn-large deep-purple lighten-2" href="#" data-target="dropdown2"
+                            id="accent-font">what category of gear are you adding?<i
+                                class="material-icons right">expand_more</i></a>
+                        <ul class="dropdown-content" id="dropdown2">
+                            <span>{{#each categories}}
+                                <li>{{category}}</li>
+                                {{/each}}
+                            </span>
+                            <hr>
+                            {{!-- trekking poles, backpacks, headlamps, compass --}}
+                            <li>Hiking</li>
+                            {{!-- tents, flashlight, stoves, sleeping bags, sleeping pads --}}
+                            <li>Camping/Backpacking</li>
+                            {{!-- ropes, harnesses, belay devices, helmets, chalk bags --}}
+                            <li>Rock Climbing</li>
+                            {{!-- fishing poles, nets, waders --}}
+                            <li>Fishing</li>
+                            {{!-- snowshoes, leg gaiters --}}
+                            <li>Snowshoeing</li>
+                            {{!-- ice axe, shovels --}}
+                            <li>Mountaineering</li>
+                            {{!-- skis, ski poles, boots, bindings, helmets, ski rack --}}
+                            <li>Skiing</li>
+                            {{!-- snowboards, boots, bindings, helmets, snowboard rack --}}
+                            <li>Snowboarding</li>
+                            {{!-- paddleboards, paddles-could just be implied, life vests --}}
+                            <li>Paddleboarding</li>
+                            {{!-- canoe, life vest? --}}
+                            <li>Canoeing</li>
+                            {{!-- kayak, life vest?, car rack --}}
+                            <li>Kayaking</li>
+                            {{!-- bike, helmet, bike rack --}}
+                            <li>Cycling</li>
+                        </ul>
     
     {{#each gears}}    
             <div class="card horizontal">

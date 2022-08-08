@@ -40,6 +40,13 @@ footer {
     height: 5vh;
 }
 
+#upload-widget {
+    color: white;
+}
+
+#my-gear {
+    font-size:3vh;
+}
 /* .fill-view {
     min-height: calc(100vh);
 } */

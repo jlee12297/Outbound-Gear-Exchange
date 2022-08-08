@@ -12,4 +12,13 @@ Gear.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
+Category.hasMany(Gear, {
+  foreignKey: 'category_id',
+  onDelete: 'CASCADE'
+})
+
+Gear.belongsTo(Category, {
+  foreignKey: 'category_id'
+})
+
 module.exports = { User, Gear, Orders, Category };

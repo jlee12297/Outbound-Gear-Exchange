@@ -3,7 +3,7 @@
     <div class="container col offset-1">
         <div class="row">
             <div class="col s7 m5">
-                <div class="card-panel indigo lighten-1 hide-on-small-only card-radius">
+                <div class="card-panel indigo lighten-1 hide-on-small-only card-radius fade-out">
                     <div class="card-content white-text center" id="accent-font">
                         <span class="card-title">
                             <h3>Welcome, {{name}}!</h3>
@@ -17,13 +17,12 @@
         <div class="container">
             <div class="row">
                 <ul class="collapsible card-radius">
-                    <li>
-                        <div class="collapsible-header orange top-radius">
-                            {{!-- swapped out grey-text text-darken-4 for white--}}
+                    <li class="">
+                        <div class="collapsible-header orange card-radius">
                             <i class="material-icons white-text">more_vert</i><span id="my-gear"
                                 class="white-text">Gear at a Glance</span>
                         </div>
-                        <div class="collapsible-body orange lighten-3 bottom-radius">
+                        <div class="collapsible-body orange lighten-3 card-radius">
                             <span>
                                 {{#each gears}}
                                 <a href="" class="btn del-btn red card-radius" data-id="{{id}}"><i
@@ -34,21 +33,6 @@
                             </span>
                         </div>
                     </li>
-
-                    {{!-- <div class="card col s12 m6">
-                        <div class="waves-effect waves-block waves-light">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">My Gear <i
-                                    class="material-icons">build</i></span>
-                        </div>
-                        <div class="card-reveal ">
-                            <span class="card-title grey-text text-darken-4">Gear at a Glance<i
-                                    class="material-icons right">close</i></span>
-                            <p>
-                            </p>
-                        </div>
-                    </div> --}}
                 </ul>
             </div>
         </div>

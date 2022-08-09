@@ -3,47 +3,49 @@
     <div class="container col offset-1">
         <div class="row">
             <div class="col s7 m5">
-                <div class="card-panel orange darken-1 center">
+                <div class="card-panel orange darken-1 center card-radius" id="welcome-card">
                     <div class="card-content white-text" id="accent-font">
                         <span class="card-title">
                             <h3>Welcome, {{name}}!</h3>
+                            <h5>Let's get started.</h5>
                         </span>
-                        <h5>Let's get started.</h5>
                     </div>
                 </div>
             </div>
         </div>
-        <br><br><br>
-        {{!-- Dropdown Trigger --}}
-        <div class="container center-align">
-            <div class="row" id="enlarge-dropdown">
-                <div class="col s6 offset-s3">
-                    <div class="card-panel indigo lighten-1 white-text center dropdown-trigger my-gear" id="accent-font" id="my-gear"
-                        data-target="dropdown1"><i class="material-icons rowing-icon">rowing</i>MY GEAR</div>
+    </div>
+    <br><br><br>
+    {{!-- Dropdown Trigger --}}
+    <div class="container center-align">
+        <div class="row" id="enlarge-dropdown">
+            <div class="col s6 offset-s3">
+                <div class="card-panel indigo lighten-1 white-text center dropdown-trigger my-gear card-radius"
+                    id="accent-font" id="my-gear" data-target="dropdown1"><i
+                        class="material-icons rowing-icon">rowing</i>MY GEAR</div>
+            </div>
+            {{!-- Dropdown Structure --}}
+            {{!-- These hrefs will lead to the corresponding pages --}}
+            <ul id='dropdown1' class='dropdown-content col 6'>
+                <li><a href="/viewmygear" class="indigo-text"><i class="material-icons indigo-text">view_list</i>View My
+                        Gear</a>
+                </li>
+                <li class="divider" tabindex="-1"></li>
+                <li><a href="/addgear" class="indigo-text"><i class="material-icons indigo-text">add</i>Add Some
+                        Gear</a>
+                </li>
+            </ul>
+
+            <br>
+            <div class="container center-align">
+                <div class="row" id="accent-font" id="enlarge-dropdown">
+                    <div class="" id="accent-font">
+                        <button class="btn btn-large indigo lighten-3 card-radius col s8 offset-s2" id="accent-font"><i
+                                class="material-icons cycling-icon">directions_bike</i>Search Gear</button>
+                    </div>
                 </div>
-                {{!-- Dropdown Structure --}}
-                {{!-- These hrefs will lead to the corresponding pages --}}
-                <ul id='dropdown1' class='dropdown-content col 6'>
-                    <li><a href="/viewmygear" class="indigo-text"><i
-                                class="material-icons indigo-text">view_list</i>View My
-                            Gear</a>
-                    </li>
-                    <li class="divider" tabindex="-1"></li>
-                    <li><a href="/addgear" class="indigo-text"><i class="material-icons indigo-text">add</i>Add Some
-                            Gear</a>
-                    </li>
-                </ul>
             </div>
         </div>
-        <br>
-        <div class="container center-align">
-            <div class="row" id="accent-font" id="enlarge-dropdown">
-                <div class="" id="accent-font">
-                    <button class="btn btn-large indigo lighten-3" id="accent-font"><i
-                            class="material-icons left">directions_bike</i>Search Gear</button>
-                </div>
-            </div>
-        </div>
+    </div>
 
 </main>
 <script src="/js/newGear.js"></script>

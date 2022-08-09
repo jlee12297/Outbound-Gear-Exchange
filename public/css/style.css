@@ -4,9 +4,19 @@
     padding: 0;
 }
 
-/* .brand-logo {
-    font-family: 'Amatic SC', cursive;
-} */
+.top-radius{
+    border-radius: 10px 10px 3px 3px;
+
+}
+
+.bottom-radius{
+    border-radius: 0px 0px 10px 10px;
+
+}
+
+.card-radius{
+    border-radius: 10px 10px 10px 10px;
+}
 
 #oge {
     font-family: 'Amatic SC', cursive;
@@ -21,11 +31,16 @@
 
 /* profile.hanlebars */
 .rowing-icon{
-    margin-right: 15px;
+    margin-right: 5px;
+}
+
+.cycling-icon{
+    margin-right: 5px;
 }
 
 .my-gear{
     font-size: 1.5rem;
+    white-space: nowrap;
 }
 
 body {
@@ -77,6 +92,12 @@ footer {
         font-size: 2rem;
         white-space: nowrap;
     }
+
+    .my-gear{
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
     #form-font{
         font-family: 'Amatic SC', cursive;
         font-size: medium;
@@ -84,6 +105,10 @@ footer {
     }
 /* placeholder not reactive yet */
     #placeholder{
+        font-size: 2rem;
+    }
+/* welcome card in profile.handlebars */
+    #welcome-card h3{
         font-size: 2rem;
     }
 }

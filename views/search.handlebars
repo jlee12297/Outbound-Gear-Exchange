@@ -1,46 +1,34 @@
-<body>
+<main>
 
-<div class="container">
-    
-    <br><br>
+    <div class="container">
 
-      <div>
-                        <a class="dropdown-trigger btn btn-large deep-purple lighten-2" href="#" data-target="dropdown2"
-                            id="accent-font">what category of gear are you looking for?<i
-                                class="material-icons right">expand_more</i></a>
-                        <ul class="dropdown-content" id="dropdown2">
-                            <span>{{#each categories}}
-                                <li>{{category}}</li>
-                                {{/each}}
-                            </span>
-                            <hr>
-                            {{!-- trekking poles, backpacks, headlamps, compass --}}
-                            <li>Hiking</li>
-                            {{!-- tents, flashlight, stoves, sleeping bags, sleeping pads --}}
-                            <li>Camping/Backpacking</li>
-                            {{!-- ropes, harnesses, belay devices, helmets, chalk bags --}}
-                            <li>Rock Climbing</li>
-                            {{!-- fishing poles, nets, waders --}}
-                            <li>Fishing</li>
-                            {{!-- snowshoes, leg gaiters --}}
-                            <li>Snowshoeing</li>
-                            {{!-- ice axe, shovels --}}
-                            <li>Mountaineering</li>
-                            {{!-- skis, ski poles, boots, bindings, helmets, ski rack --}}
-                            <li>Skiing</li>
-                            {{!-- snowboards, boots, bindings, helmets, snowboard rack --}}
-                            <li>Snowboarding</li>
-                            {{!-- paddleboards, paddles-could just be implied, life vests --}}
-                            <li>Paddleboarding</li>
-                            {{!-- canoe, life vest? --}}
-                            <li>Canoeing</li>
-                            {{!-- kayak, life vest?, car rack --}}
-                            <li>Kayaking</li>
-                            {{!-- bike, helmet, bike rack --}}
-                            <li>Cycling</li>
-                        </ul>
-    
-    {{#each gears}}    
+        <br><br>
+
+        <div>
+            <a class="dropdown-trigger btn btn-large deep-purple lighten-2" href="#" data-target="dropdown2"
+                id="accent-font">what category of gear are you looking for?<i
+                    class="material-icons right">expand_more</i></a>
+            <ul class="dropdown-content" id="dropdown2">
+                <span>{{#each categories}}
+                    <li>{{category}}</li>
+                    {{/each}}
+                </span>
+                <hr>
+                <li>Hiking</li>
+                <li>Camping/Backpacking</li>
+                <li>Rock Climbing</li>
+                <li>Fishing</li>
+                <li>Snowshoeing</li>
+                <li>Mountaineering</li>
+                <li>Skiing</li>
+                <li>Snowboarding</li>
+                <li>Paddleboarding</li>
+                <li>Canoeing</li>
+                <li>Kayaking</li>
+                <li>Cycling</li>
+            </ul>
+
+            {{#each gears}}
             <div class="card horizontal">
                 <div class="card-image">
                     <img src="{{image}}" alt="Gear Image">
@@ -60,13 +48,47 @@
                             <li>Date Added: {{date_created}}</li>
                             <li class="divider" tabindex="-1"></li>
                             <li class="divider" tabindex="-1"></li>
-                            
+
                         </ul>
+                    </div>
+                    <button class="btn modal-trigger" data-target="modal1">Request</button>
+                    <div id="modal1" class="modal">
+                        <div class="modal-content"><a class="waves-effect waves-light btn red right"><i class="material-icons text-white modal-close">close</i></a>
+                            {{msg}}
+                            <h4>Gear Request Form</h4>
+                            <p>Please complete the form below to request this gear item. Please include a detailed message and the date you would like to pick up the gear. Then check your email for a response from the gear owner to connect with the gear!</p>
+                            <div class="container">
+                                <form action="send" method="post" id="email-btn">
+                                <br><br>
+                                    <div class="container col s3">
+                                    <h5>Gear for: {{user.name}}</h5>
+                                    <h6>Gear ID: {{id}}</h6>
+                                    <p>
+                                        <label>Start date</label>
+                                        <input type="text" class="datepicker" name="date">
+                                    </p>
+                                    <p>
+                                        <label class="active">Message</label>
+                                        <textarea name="message" class="materialize-textarea active" rows="5"></textarea>
+                                    </p>
+                                    </div>
+                                
+                                <div class="modal-footer">
+                            <button class="btn waves-effect waves-light" type="submit" name="action"><i
+                                    class="material-icons right">check_box</i> Request gear</button>
+                        </div>
+                                
+                                
+                                </form>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
             {{/each}}
 
-</div>
+        </div>
 
-</body>
+</main>
+<script>'/js/email.js'</script>

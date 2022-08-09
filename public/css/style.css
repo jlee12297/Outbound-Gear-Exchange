@@ -19,6 +19,15 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/* profile.hanlebars */
+.rowing-icon{
+    margin-right: 15px;
+}
+
+.my-gear{
+    font-size: 1.5rem;
+}
+
 body {
     background-image: url("../images/tent-cluster.jpg");
     background-repeat: no-repeat;

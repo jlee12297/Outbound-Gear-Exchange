@@ -3,8 +3,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems, options);
-    
+  
   });
+ 
 
   function showUploadWidget() {
  cloudinary.openUploadWidget({
@@ -51,4 +52,4 @@ document.addEventListener('DOMContentLoaded', function() {
      console.log("Upload Widget event - ", info);
    }
   });
- }
+}

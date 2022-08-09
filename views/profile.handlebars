@@ -1,46 +1,51 @@
-<h1>Welcome back, {{name}}</h1>
-
-{{!-- copied from index.html which I used as a sandbox --}}
-    <main>
+<main>
+    <br><br>
+    <div class="container col offset-1">
+        <div class="row">
+            <div class="col s7 m5">
+                <div class="card-panel orange darken-1 center">
+                    <div class="card-content white-text" id="accent-font">
+                        <span class="card-title">
+                            <h3>Welcome, {{name}}!</h3>
+                        </span>
+                        <h5>Let's get started.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
         <br><br><br>
         {{!-- Dropdown Trigger --}}
         <div class="container center-align">
-            <div class="row" id="accent-font" id="enlarge-dropdown">
+            <div class="row" id="enlarge-dropdown">
                 <div class="col s6 offset-s3">
-                    <div class="card-panel indigo lighten-1 white-text dropdown-trigger" data-target="dropdown1"><i
-                            class="material-icons white-text">rowing</i>My Gear</div>
+                    <div class="card-panel indigo lighten-1 white-text center dropdown-trigger my-gear" id="accent-font" id="my-gear"
+                        data-target="dropdown1"><i class="material-icons rowing-icon">rowing</i>MY GEAR</div>
                 </div>
                 {{!-- Dropdown Structure --}}
                 {{!-- These hrefs will lead to the corresponding pages --}}
                 <ul id='dropdown1' class='dropdown-content col 6'>
-                    <li><a href="/viewmygear" class="indigo-text"><i class="material-icons indigo-text">view_list</i>View My
+                    <li><a href="/viewmygear" class="indigo-text"><i
+                                class="material-icons indigo-text">view_list</i>View My
                             Gear</a>
                     </li>
                     <li class="divider" tabindex="-1"></li>
-                    <li><a href="/addgear" class="indigo-text"><i class="material-icons indigo-text">add</i>Add Some Gear</a>
+                    <li><a href="/addgear" class="indigo-text"><i class="material-icons indigo-text">add</i>Add Some
+                            Gear</a>
                     </li>
                 </ul>
             </div>
         </div>
         <br>
-        <div class="container">
+        <div class="container center-align">
             <div class="row" id="accent-font" id="enlarge-dropdown">
-                <div class="col s6 offset-s3">
-                    <nav>
-                        <div class="nav-wrapper">
-                            <form>
-                                <div class="input-field indigo lighten-3">
-                                    <input id="search" type="search" placeholder="Search For Gear" required>
-                                    <label class="label-icon" for="search"><i
-                                            class="material-icons white-text">search</i></label>
-                                    <i class="material-icons">close</i>
-                                </div>
-                            </form>
-                        </div>
-                    </nav>
+                <div class="" id="accent-font">
+                    <button class="btn btn-large indigo lighten-3" id="accent-font"><i
+                            class="material-icons left">directions_bike</i>Search Gear</button>
                 </div>
+            </div>
+        </div>
 
-    </main>
+</main>
 <script src="/js/newGear.js"></script>
 <script src="/js/delBtn.js"></script>
-<script> src="/js/upload_widget.js"</script>
+<script> src = "/js/upload_widget.js"</script>

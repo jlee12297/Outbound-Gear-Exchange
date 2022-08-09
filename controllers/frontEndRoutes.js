@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {User,Gear,Category} = require('../models');
 
+
 router.get("/",(req,res)=>{
     res.render("landingpage",{
         logged_in:req.session.logged_in
@@ -61,12 +62,14 @@ router.get("/search",(req,res)=>{
         include:[User,Category]
     }).then(data=>{
         const hbsData = data.map(gear=>gear.toJSON())
-        console.log(hbsData)
+        //console.log(hbsData)
         res.render("search",{
             gears:hbsData,
             logged_in:req.session.logged_in
         })
     })
+    
+    
 })
 
 

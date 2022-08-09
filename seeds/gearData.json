@@ -21,63 +21,74 @@
   {
     "name": "Snow Shoes",
     "category_id":10,
-    "description": "Yukon Charlies Snow shoes, for snowshoeing! "
-   
+    "description": "Yukon Charlies Snow shoes, for snowshoeing! ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/xbjyuidi9gdkoq3xjquf.jpg"
   },
   {
     "name": "car rack",
     "category_id":11,
-    "description": "car rack great used for carrying bulky equiments"
+    "description": "car rack great used for carrying bulky equiments",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/qxm8ybxv5vbwrohbbtgb.jpg"
 
   },
   {
     "name": "Tent",
     "category_id":2,
-    "description": "REI gray 4 person tent! Great for camping! "
+    "description": "REI gray 4 person tent! Great for camping! ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/tz6ypnmo05u91ahg3pat.jpg"
   },
   {
     "name": "Camping Laterns",
     "category_id":2,
-    "description": "LED camping latern ! Perfect for outdoor activities! "
+    "description": "LED camping latern ! Perfect for outdoor activities! ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/e8zcbaukl136hup47pqh.jpg"
   },
   {
     "name": "Sleeping Pads",
     "category_id":2,
-    "description": "Sea to Summit sleeping pad for camping  "
+    "description": "Sea to Summit sleeping pad for camping  ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/kmwwmsa1fcrfzswlfm57.jpg"
   },
   {
-    "name": "Conoe",
+    "name": "Canoe",
     "category_id":7,
-    "description": "Forest green conoe "
+    "description": "Forest green canoe ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899116/vjjgpehlbcfi7azyhpgl.jpg"
   },
   {
     "name": "Life vest",
     "category_id":7,
-    "description": "Size Medium Life vest  "
+    "description": "Size Medium Life vest  ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899116/haxsgvhthszepz1vr636.jpg"
   },
   {
-    "name": "Snowboards",
+    "name": "Snowboard",
     "category_id":6,
-    "description": "Burton Women snowboard  "
+    "description": "Burton Women snowboard  ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899116/tnpkjynj4e8chyggvact.jpg"
   },
   {
-    "name": "Paddle Boarding",
+    "name": "Paddle Board",
     "category_id":8,
-    "description": "Blue Paddle board! Great for summer ! "
+    "description": "Blue Paddle board! Great for summer ! ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/s98zmay4d8wxrp6t0vwc.jpg"
   },
   {
     "name": "Fishing poles",
     "category_id":9,
-    "description": "Fishing pole  "
+    "description": "Fishing pole  ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/kcw119alm6hiskuspvxt.jpg"
   },
   {
     "name": "Ski poles",
     "category_id":3,
-    "description": "Black Diamond ski poles  "
+    "description": "Black Diamond ski poles  ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/skgzoegepogjzf12budx.jpg"
   },
   {
     "name": "Trekking poles",
     "category_id":1,
-    "description": "Black Diamond trail trekking poles. Great for Hiking! "
+    "description": "Black Diamond trail trekking poles. Great for Hiking! ",
+    "image": "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/zogtnztpvp9hvyeuryxb.jpg"
   }  
 ]

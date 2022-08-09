@@ -28,7 +28,7 @@
             </ul>
 
             {{#each gears}}
-            <div class="card horizontal">
+            <div class="card horizontal card-radius">
                 <div class="card-image">
                     <img src="{{image}}" alt="Gear Image">
                 </div>
@@ -48,8 +48,12 @@
                             <li class="divider" tabindex="-1"></li>
                             <li class="divider" tabindex="-1"></li>
 
-                        <button class="btn modal-trigger" data-target="modal1">Request</button>
-                    <div id="modal1" class="modal">
+                        </ul>
+                    </div>
+                    <div>
+                    <button class="btn modal-trigger right orange" data-target="modal1">Request This Gear</button>
+                    </div>
+                    <div id="modal1" class="modal card-radius">
                         <div class="modal-content"><a class="waves-effect waves-light btn red right"><i class="material-icons text-white modal-close">close</i></a>
                             {{msg}}
                             <h4>Gear Request Form</h4>
@@ -57,9 +61,12 @@
                             <div class="container">
                                 <form action="send" method="post" id="email-btn">
                                 <br><br>
-                                    <div class="container col s3">
-                                    <h5>Gear for: {{this.user.name}}</h5>
+                                    <div class="container">
+                                    <h5>Gear for: {{user.name}}</h5>
                                     <h6>Gear ID: {{id}}</h6>
+                                    <div class="card-image">
+                                        <img src="{{image}}" alt="Gear Image">
+                                    </div>
                                     <p>
                                         <label>Start date</label>
                                         <input type="text" class="datepicker" name="date">
@@ -68,12 +75,11 @@
                                         <label class="active">Message</label>
                                         <textarea name="message" class="materialize-textarea active" rows="5"></textarea>
                                     </p>
+                                    
                                     </div>
-                                
-                                <div class="modal-footer">
-                            <button class="btn waves-effect waves-light" type="submit" name="action"><i
-                                    class="material-icons right">check_box</i> Request gear</button>
-                        </div>
+                                <div class="modal-footer container">
+                                    <button class="btn waves-effect waves-light right orange" type="submit" name="action"><i class="material-icons right">check_box</i> Request gear</button>                                
+                                </div>
                                 
                                 
                                 </form>

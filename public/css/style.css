@@ -29,6 +29,11 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.collapsible {
+    box-shadow: none!important;
+    border: none!important;
+}
+
 /* profile.hanlebars */
 .rowing-icon{
     margin-right: 5px;

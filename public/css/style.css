@@ -11,7 +11,6 @@
 
 .bottom-radius{
     border-radius: 0px 0px 10px 10px;
-
 }
 
 .card-radius{
@@ -62,7 +61,18 @@ body {
     font-size:4vh;
 }
 
-/* addGear.handlebars */
+/* addGear.handlebars and profile.handlebars */
+.fade-out {
+        animation-name: example;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+      }
+
+    @keyframes example {
+        from {opacity: 2;}
+        to {opacity: 0;}
+    }
+
 #form-font{
     font-family: 'Amatic SC', cursive;
     font-size: large;

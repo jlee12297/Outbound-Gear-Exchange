@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {User,Gear,Category} = require('../models');
+const { Op } = require("sequelize");
 
 
 router.get("/",(req,res)=>{
@@ -59,10 +60,15 @@ router.get("/search",(req,res)=>{
         res.redirect("/")
     }
     Gear.findAll({
-        include:[User,Category]
+        include:[User,Category],
+        where: {
+            user_id: {
+                [Op.not]: req.session.user_id
+            }
+        }
     }).then(data=>{
         const hbsData = data.map(gear=>gear.toJSON())
-        //console.log(hbsData)
+        console.log(hbsData)
         res.render("search",{
             gears:hbsData,
             logged_in:req.session.logged_in
@@ -79,11 +85,14 @@ router.get("/search/:id",(req,res)=>{
     Gear.findAll({
         include:[User,Category],
         where: {
-            category_id: req.params.id
+            category_id: req.params.id,
+            user_id: {
+                [Op.not]: req.session.user_id
+            }
         }
     }).then(data=>{
         const hbsData = data.map(gear=>gear.toJSON())
-        console.log(hbsData)
+        //console.log(hbsData)
         res.render("search",{
             gears:hbsData,
             logged_in:req.session.logged_in

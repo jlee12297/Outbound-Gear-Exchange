@@ -63,6 +63,8 @@ app.post("/send", async (req,res) => {
     <p>Your Outbound Gear Exchange Team</p>
     `
   })
+  // res.send()
+  res.redirect('/search')
 })
 
 sequelize.sync({ force: false }).then(() => {

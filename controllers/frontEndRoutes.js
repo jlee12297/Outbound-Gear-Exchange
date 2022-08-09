@@ -61,7 +61,7 @@ router.get("/search",(req,res)=>{
         include:[User,Category]
     }).then(data=>{
         const hbsData = data.map(gear=>gear.toJSON())
-        console.log(hbsData)
+        console.log(hbsData[0])
         res.render("search",{
             gears:hbsData,
             logged_in:req.session.logged_in

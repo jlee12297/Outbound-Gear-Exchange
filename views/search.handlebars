@@ -9,27 +9,26 @@
                 id="accent-font">what category of gear are you looking for?<i
                     class="material-icons right">expand_more</i></a>
             <ul class="dropdown-content" id="dropdown2">
-                <span>{{#each categories}}
-                    <li>{{category}}</li>
-                    {{/each}}
-                </span>
+                
                 <hr>
-                <li>Hiking</li>
-                <li>Camping/Backpacking</li>
-                <li>Rock Climbing</li>
-                <li>Fishing</li>
-                <li>Snowshoeing</li>
-                <li>Mountaineering</li>
-                <li>Skiing</li>
-                <li>Snowboarding</li>
-                <li>Paddleboarding</li>
-                <li>Canoeing</li>
-                <li>Kayaking</li>
-                <li>Cycling</li>
+
+                <li><a href="/search">SHOW ALL</a></li>
+                <li><a href="/search/1">Hiking</a></li>
+                <li><a href="/search/2">Camping/Backpacking</a></li>
+                <li><a href="/search/3">Skiing</a></li>
+                <li><a href="/search/4">Rockclimbing</a></li>
+                <li><a href="/search/5">Cycling</a></li>
+                <li><a href="/search/6">Snowboarding</a></li>
+                <li><a href="/search/7">Canoeing</a></li>
+                <li><a href="/search/8">Paddle Boarding</a></li>
+                <li><a href="/search/9">Fishing</a></li>
+                <li><a href="/search/10">Snow Shoeing</a></li>
+                <li><a href="/search/11">Kayaking</a></li>
+    
             </ul>
 
             {{#each gears}}
-            <div class="card horizontal">
+            <div class="card horizontal card-radius">
                 <div class="card-image">
                     <img src="{{image}}" alt="Gear Image">
                 </div>
@@ -45,14 +44,16 @@
                             <li class="divider" tabindex="-1"></li>
                             <li>Description: {{description}}</li>
                             <li class="divider" tabindex="-1"></li>
-                            <li>Date Added: {{date_created}}</li>
+                            <li>Date Added: {{date_created}} {{user.name}}</li>
                             <li class="divider" tabindex="-1"></li>
                             <li class="divider" tabindex="-1"></li>
 
                         </ul>
                     </div>
-                    <button class="btn modal-trigger" data-target="modal1">Request</button>
-                    <div id="modal1" class="modal">
+                    <div>
+                    <button class="btn modal-trigger right orange" data-target="modal1">Request This Gear</button>
+                    </div>
+                    <div id="modal1" class="modal card-radius">
                         <div class="modal-content"><a class="waves-effect waves-light btn red right"><i class="material-icons text-white modal-close">close</i></a>
                             {{msg}}
                             <h4>Gear Request Form</h4>
@@ -60,9 +61,12 @@
                             <div class="container">
                                 <form action="send" method="post" id="email-btn">
                                 <br><br>
-                                    <div class="container col s3">
+                                    <div class="container">
                                     <h5>Gear for: {{user.name}}</h5>
                                     <h6>Gear ID: {{id}}</h6>
+                                    <div class="card-image">
+                                        <img src="{{image}}" alt="Gear Image">
+                                    </div>
                                     <p>
                                         <label>Start date</label>
                                         <input type="text" class="datepicker" name="date">
@@ -71,12 +75,11 @@
                                         <label class="active">Message</label>
                                         <textarea name="message" class="materialize-textarea active" rows="5"></textarea>
                                     </p>
+                                    
                                     </div>
-                                
-                                <div class="modal-footer">
-                            <button class="btn waves-effect waves-light" type="submit" name="action"><i
-                                    class="material-icons right">check_box</i> Request gear</button>
-                        </div>
+                                <div class="modal-footer container">
+                                    <button class="btn waves-effect waves-light right orange" type="submit" name="action"><i class="material-icons right">check_box</i> Request gear</button>                                
+                                </div>
                                 
                                 
                                 </form>
@@ -84,6 +87,10 @@
                         </div>
                         
                     </div>
+
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
             {{/each}}

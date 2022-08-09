@@ -14,7 +14,7 @@ app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 
 //Body Parser middleware
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 document.querySelectorAll("#email-btn").addEventListenener("submit", e=>{

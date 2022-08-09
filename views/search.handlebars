@@ -9,7 +9,7 @@
                 id="accent-font">what category of gear are you looking for?<i
                     class="material-icons right">expand_more</i></a>
             <ul class="dropdown-content" id="dropdown2">
-                
+
                 <hr>
 
                 <li><a href="/search">SHOW ALL</a></li>
@@ -24,7 +24,7 @@
                 <li><a href="/search/9">Fishing</a></li>
                 <li><a href="/search/10">Snow Shoeing</a></li>
                 <li><a href="/search/11">Kayaking</a></li>
-    
+
             </ul>
 
             {{#each gears}}
@@ -51,51 +51,57 @@
                         </ul>
                     </div>
                     <div>
-                    <button class="btn modal-trigger right orange" data-target="modal1">Request This Gear</button>
+                        <button class="btn modal-trigger right orange" data-target="modal1">Request This Gear</button>
                     </div>
                     <div id="modal1" class="modal card-radius">
-                        <div class="modal-content"><a class="waves-effect waves-light btn red right"><i class="material-icons text-white modal-close">close</i></a>
+                        <div class="modal-content"><a class="waves-effect waves-light btn red right"><i
+                                    class="material-icons text-white modal-close">close</i></a>
                             {{msg}}
                             <h4>Gear Request Form</h4>
-                            <p>Please complete the form below to request this gear item. Please include a detailed message and the date you would like to pick up the gear. Then check your email for a response from the gear owner to connect with the gear!</p>
+                            <p>Please complete the form below to request this gear item. Please include a detailed
+                                message and the date you would like to pick up the gear. Then check your email for a
+                                response from the gear owner to connect with the gear!</p>
                             <div class="container">
                                 <form action="send" method="post" id="email-btn">
-                                <br><br>
+                                    <br><br>
                                     <div class="container">
-                                    <h5>Gear for: {{user.name}}</h5>
-                                    <h6>Gear ID: {{id}}</h6>
-                                    <div class="card-image">
-                                        <img src="{{image}}" alt="Gear Image">
+                                        <h5>Gear for: {{user.name}}</h5>
+                                        <h6>Gear ID: {{id}}</h6>
+                                        <div class="card-image">
+                                            <img src="{{image}}" alt="Gear Image">
+                                        </div>
+                                        <p>
+                                            <label>Start date</label>
+                                            <input type="text" class="datepicker" name="date">
+                                        </p>
+                                        <p>
+                                            <label class="active">Message</label>
+                                            <textarea name="message" class="materialize-textarea active"
+                                                rows="5"></textarea>
+                                        </p>
+
                                     </div>
-                                    <p>
-                                        <label>Start date</label>
-                                        <input type="text" class="datepicker" name="date">
-                                    </p>
-                                    <p>
-                                        <label class="active">Message</label>
-                                        <textarea name="message" class="materialize-textarea active" rows="5"></textarea>
-                                    </p>
-                                    
+                                    <div class="modal-footer container">
+                                        <button class="btn waves-effect waves-light right orange" type="submit"
+                                            name="action"><i class="material-icons right">check_box</i> Request
+                                            gear</button>
                                     </div>
-                                <div class="modal-footer container">
-                                    <button class="btn waves-effect waves-light right orange" type="submit" name="action"><i class="material-icons right">check_box</i> Request gear</button>                                
-                                </div>
-                                
-                                
+
+
                                 </form>
                             </div>
                         </div>
-                        
+
                     </div>
 
-                        </ul>
-                    </div>
-                    
+                    </ul>
                 </div>
-            </div>
-            {{/each}}
 
+            </div>
         </div>
+        {{/each}}
+
+    </div>
 
 </main>
 <script>'/js/email.js'</script>

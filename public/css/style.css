@@ -8,7 +8,7 @@
     font-family: 'Amatic SC', cursive;
 } */
 
-h1 {
+#oge {
     font-family: 'Amatic SC', cursive;
     font-size: 3rem;
     margin: 0;
@@ -17,6 +17,15 @@ h1 {
 
 #accent-font {
     font-family: 'Josefin Sans', sans-serif;
+}
+
+/* profile.hanlebars */
+.rowing-icon{
+    margin-right: 15px;
+}
+
+.my-gear{
+    font-size: 1.5rem;
 }
 
 body {
@@ -63,8 +72,8 @@ footer {
 }
 
 @media screen and (max-width:576px) {
-    h1 {
-        padding-top: 2vh;
+    #oge {
+        /* padding-top: 2vh; */
         font-size: 2rem;
         white-space: nowrap;
     }

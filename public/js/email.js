@@ -17,12 +17,9 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-// document.querySelectorAll("#request.btn").addEventListenenr("submit", e=>{
-//     e.preventDefault();
-//     app.get('/search', (req, res) => {
-//     console.log(req.body)
-//     })
-// })
+document.querySelectorAll("#email-btn").addEventListenener("submit", e=>{
+    e.preventDefault();
+})
 
 const output = `
     <p>You have a new gear request from Kristen.</p>

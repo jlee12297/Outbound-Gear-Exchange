@@ -8,14 +8,14 @@
             href="#"
             v-on:click="exitModal">
             <li>
-                <div class="collapsible-header indigo-text"><i class="material-icons indigo-text">landscape</i>About
+                <div class="collapsible-header indigo-text card-radius"><i class="material-icons indigo-text">landscape</i>About
                     Outbound Gear Exchange</div>
-                <div class="collapsible-body white"><span class="flow-text indigo-text">Outbound Gear Exchange started as a small group of friends who found themselves gear swapping for a variety of reasons. Some of us wanted to explore new activities, others needed to borrow gear for an out-of-town friend, and some simply wanted to try out different products--experimenting with different setups. What became immediately evident, in the process, was that we were building a community of people passionate about the outdoors who found joy in fostering experiences for others in the community. This iteration of Outbound Gear Exchange still holds true to its original mission—to connect people with gear and fun.  With this platform, our goal is to continue to build a supportive community of adventurers and promote equitable access to nature.</span></div>
+                <div class="collapsible-body white card-radius"><span class="flow-text indigo-text">Outbound Gear Exchange started as a small group of friends who found themselves gear swapping for a variety of reasons. Some of us wanted to explore new activities, others needed to borrow gear for an out-of-town friend, and some simply wanted to try out different products--experimenting with different setups. What became immediately evident, in the process, was that we were building a community of people passionate about the outdoors who found joy in fostering experiences for others in the community. This iteration of Outbound Gear Exchange still holds true to its original mission—to connect people with gear and fun.  With this platform, our goal is to continue to build a supportive community of adventurers and promote equitable access to nature.</span></div>
             </li>
             <li {{#if logged_in}} hidden {{/if}}>
-                <div class="collapsible-header indigo-text"><i
+                <div class="collapsible-header indigo-text card-radius"><i
                         class="material-icons indigo-text">flight_takeoff</i>Login</div>
-                <div class="collapsible-body white"><span>
+                <div class="collapsible-body white card-radius"><span>
                         <form action="" id="login">
                             <div class="input-field">
                                 <input type="text" name="login-email" id="login-email">
@@ -32,9 +32,9 @@
                     </span></div>
             </li>
             <li {{#if logged_in}} hidden {{/if}}>
-                <div class="collapsible-header indigo-text"><i class="material-icons indigo-text">highlight</i>Sign Up &
+                <div class="collapsible-header indigo-text card-radius"><i class="material-icons indigo-text">highlight</i>Sign Up &
                     Explore</div>
-                <div class="collapsible-body white"><span>
+                <div class="collapsible-body white card-radius"><span>
                         <form action="" id="signup">
                             <div class="input-field">
                                 <input type="text" name="signup-name" id="signup-name">
@@ -57,10 +57,10 @@
                     </span></div>
             </li>
             <li>
-                <div class="collapsible-header indigo-text"><i class="material-icons indigo-text">all_inclusive</i>Meet
+                <div class="collapsible-header indigo-text card-radius"><i class="material-icons indigo-text">all_inclusive</i>Meet
                     the Team
                 </div>
-                <div class="collapsible-body white"><span>
+                <div class="collapsible-body white card-radius"><span>
                         <div class="collection">
                             <a href="https://github.com/kristensantee" target="blank"
                                 class="collection-item indigo-text">Kristen Santee - Project Manager</a>
@@ -77,5 +77,6 @@
     </div>
     </li>
     </ul>
+    </div>
     </div>
 </main>

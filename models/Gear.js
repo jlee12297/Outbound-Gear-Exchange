@@ -18,6 +18,10 @@ Gear.init(
     description: {
       type: DataTypes.STRING,
     },
+    image: {
+      type: DataTypes.STRING,
+      defaultValue: "https://res.cloudinary.com/joshcloudinary/image/upload/v1659899144/kcsbq1kqagyclvl5ap3u.jpg",
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -29,6 +33,13 @@ Gear.init(
         model: 'user',
         key: 'id',
       },
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'category',
+        key: 'id',
+      }
     },
   },
   {

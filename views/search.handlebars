@@ -3,15 +3,13 @@
     <div class="container">
 
         <br><br>
-
+{{!-- DROPDOWN TRIGGER FOR CATEGORIES --}}
         <div>
             <a class="dropdown-trigger btn btn-large deep-purple lighten-2" href="#" data-target="dropdown2"
                 id="accent-font">what category of gear are you looking for?<i
                     class="material-icons right">expand_more</i></a>
             <ul class="dropdown-content" id="dropdown2">
-
                 <hr>
-
                 <li><a href="/search">SHOW ALL</a></li>
                 <li><a href="/search/1">Hiking</a></li>
                 <li><a href="/search/2">Camping/Backpacking</a></li>
@@ -24,82 +22,66 @@
                 <li><a href="/search/9">Fishing</a></li>
                 <li><a href="/search/10">Snow Shoeing</a></li>
                 <li><a href="/search/11">Kayaking</a></li>
-
             </ul>
-
-            {{#each gears}}
-            <div class="card horizontal card-radius">
-                <div class="card-image">
-                    <img src="{{image}}" alt="Gear Image">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content indigo-text">
-                        <ul>
-
-                            <li>Gear Id: {{id}}</li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li>Category : {{category.category_name}}</li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li>Name: {{name}}</li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li>Description: {{description}}</li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li>Date Added: {{date_created}} {{user.name}}</li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li class="divider" tabindex="-1"></li>
-
-                        </ul>
-                    </div>
-                    <div>
-                        <button class="btn modal-trigger right orange" data-target="modal1">Request This Gear</button>
-                    </div>
-                    <div id="modal1" class="modal card-radius">
-                        <div class="modal-content"><a class="waves-effect waves-light btn red right"><i
-                                    class="material-icons text-white modal-close">close</i></a>
-                            {{msg}}
-                            <h4>Gear Request Form</h4>
-                            <p>Please complete the form below to request this gear item. Please include a detailed
-                                message and the date you would like to pick up the gear. Then check your email for a
-                                response from the gear owner to connect with the gear!</p>
-                            <div class="container">
-                                <form action="send" method="post" id="email-btn">
-                                    <br><br>
-                                    <div class="container">
-                                        <h5>Gear for: {{user.name}}</h5>
-                                        <h6>Gear ID: {{id}}</h6>
-                                        <div class="card-image">
-                                            <img src="{{image}}" alt="Gear Image">
-                                        </div>
-                                        <p>
-                                            <label>Start date</label>
-                                            <input type="text" class="datepicker" name="date">
-                                        </p>
-                                        <p>
-                                            <label class="active">Message</label>
-                                            <textarea name="message" class="materialize-textarea active"
-                                                rows="5"></textarea>
-                                        </p>
-
-                                    </div>
-                                    <div class="modal-footer container">
-                                        <button class="btn waves-effect waves-light right orange" type="submit"
-                                            name="action"><i class="material-icons right">check_box</i> Request
-                                            gear</button>
-                                    </div>
-
-
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    </ul>
-                </div>
-
-            </div>
         </div>
-        {{/each}}
+{{!-- COLLAPSIBLE CARD CONTENTS OF SEARCH RESULTS --}}
+        <ul class="collapsible popout">
+            {{#each gears}}
+            <li>
+                <div class="collapsible-header card horizontal card-radius">
+                    <div class="card-image">
+                        <img src="{{image}}" alt="Gear Image">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content indigo-text">
+                            <ul>
+                                <li>Gear Id: {{id}}</li>
+                                <li class="divider" tabindex="-1"></li>
+                                <li>Category : {{category.category_name}}</li>
+                                <li class="divider" tabindex="-1"></li>
+                                <li>Name: {{name}}</li>
+                                <li class="divider" tabindex="-1"></li>
+                                <li>Description: {{description}}</li>
+                                <li class="divider" tabindex="-1"></li>
+                                <li>Date Added: {{date_created}} {{user.name}}</li>
+                                <li class="divider" tabindex="-1"></li>
+                                <li class="divider" tabindex="-1"></li>
+                            </ul>
+                            <br>
+                             <button class="btn waves-effect waves-light right orange" type="submit" name="action"><i class="material-icons right">check_box</i> Request gear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapsible-body white">
+                    <div><a class="waves-effect waves-light btn red right"><i class="material-icons text-white close-collapsible">close</i></a></div>
+                        {{msg}}
+                        <h4>Gear Request Form</h4>
+                            <p>Please complete the form below to request this gear item. Please include a detailed message and the date you would like to pick up the gear. Then check your email for a response from the gear owner to connect with the gear!</p>
+                    <div class="container">
+                        <form action="send" method="post" id="email-btn">
+                            <div class="container">
+                                <h5>Gear for: {{user.name}}</h5>
+                                <h6>Gear ID: {{id}}</h6>
+                                    <div class="card-image">
+                                        <img src="{{image}}" alt="Gear Image">
+                                    </div>
+                                <p>
+                                    <label>Start date</label>
+                                    <input type="text" class="datepicker" name="date">
+                                </p>
+                                <p>
+                                    <label class="active">Message</label>
+                                    <textarea name="message" class="materialize-textarea active" rows="5"></textarea>
+                                </p>
+                            </div>
+                                <div class="container">
+                                    <button class="btn waves-effect waves-light right orange" type="submit" name="action"><i class="material-icons right">check_box</i> Request gear</button>                                
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
 
     </div>
 

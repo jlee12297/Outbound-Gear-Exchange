@@ -72,6 +72,27 @@ router.get("/search",(req,res)=>{
     
 })
 
+router.get("/search/:id",(req,res)=>{
+    if(!req.session.logged_in) {
+        res.redirect("/")
+    }
+    Gear.findAll({
+        include:[User,Category],
+        where: {
+            category_id: req.params.id
+        }
+    }).then(data=>{
+        const hbsData = data.map(gear=>gear.toJSON())
+        console.log(hbsData)
+        res.render("search",{
+            gears:hbsData,
+            logged_in:req.session.logged_in
+        })
+    })
+    
+    
+})
+
 
 
 router.get("/gears/:id",(req,res)=>{

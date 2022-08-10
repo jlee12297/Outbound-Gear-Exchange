@@ -25,8 +25,8 @@
                         <div class="collapsible-body orange lighten-3 card-radius">
                             <span>
                                 {{#each gears}}
-                                <a href="" class="btn del-btn red card-radius" data-id="{{id}}"><i
-                                        class="material-icons right-align">delete</i></a>
+                                <button class="btn red card-radius del-btn" data-id="{{id}}"><i
+                                        class="material-icons right-align" data-id="{{id}}">delete</i></button>
                                 <a class="indigo-text accent-font" href="/gears/{{id}}">{{name}}</a>
                                 <hr>
                                 {{/each}}
@@ -44,9 +44,7 @@
                 <form action="" id="new-gear">
                     <br>
                     {{!-- ADD DROPDOWN --}}
-        
-                                <div class="row">
-                                    <form class="col s12">
+                    
                                         <div class="row">
                                             <label>Select</label>
                                             <div class="select1 green-text">
@@ -82,9 +80,14 @@
                                                 </select>
                                             </div>
                                         </div>
-
-
-                    <div class="input-field col s9 offset-s2">
+                                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                                        <div class="input-field col s9 offset-s2">
                         <input type="text" name="name" id="name">
                         <label class="active" for="name" id="form-font">what gear do you want to add?</label>
                     </div>
@@ -106,15 +109,15 @@
                         <a href="#" class="btn">clear</a>
                     </div> --}}
             </div>
+            </form>
         </div>
         <br>
-        </form>
+        
     </div>
     </div>
     {{!-- <form action="" id="new-gear">
         <input type="text" id="name" placeholder="name">
         <textarea id="description" placeholder="description"></textarea>
-
         <button>Create</button>
     </form> --}}
 
@@ -168,6 +171,6 @@
 
 </main>
 
-<script src="/js/newGear.js"></script>
 <script src="/js/delBtn.js"></script>
+<script src="/js/newGear.js"></script>
 <script> src = "/js/upload_widget.js"</script>

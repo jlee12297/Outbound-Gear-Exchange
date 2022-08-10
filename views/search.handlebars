@@ -2,7 +2,10 @@
 
     <div class="center container">
 
-        <br><br>
+        <div>
+            <h4 class="accent-font orange-text">{{msg}}</h4>
+        </div>
+        <br>
 {{!-- DROPDOWN TRIGGER FOR CATEGORIES --}}
         <div>
             
@@ -25,6 +28,7 @@
                 <li><a href="/search/11">Kayaking</a></li>
             </ul>
         </div>
+
 {{!-- COLLAPSIBLE CARD CONTENTS OF SEARCH RESULTS --}}
         <ul class="collapsible popout">
             {{#each gears}}
@@ -55,17 +59,24 @@
                 </div>
                 <div class="collapsible-body white">
                     <div><a class="waves-effect waves-light btn red right"><i class="material-icons text-white close-collapsible">close</i></a></div>
-                        {{msg}}
                         <h4>Gear Request Form</h4>
                             <p>Please complete the form below to request this gear item. Please include a detailed message and the date you would like to pick up the gear. Then check your email for a response from the gear owner to connect with the gear!</p>
                     <div class="container">
-                        <form action="send" method="post" id="email-btn">
+                        <form class="requestform" action="send" method="post" id="email-btn">
                             <div class="container">
-                                <h5>Gear for: {{user.name}}</h5>
+                                {{!-- <h5>Gear for: {{user.name}}</h5>
                                 <h6>Gear ID: {{id}}</h6>
                                     <div class="card-image">
                                         <img src="{{image}}" alt="Gear Image">
-                                    </div>
+                                    </div> --}}
+                                <p>
+                                    <label class="active">Your Name:</label>
+                                    <input name="name" class=" active">
+                                </p>
+                                <p>
+                                    <label class="active">Your Email:</label>
+                                    <input name="email" class=" active">
+                                </p>
                                 <p>
                                     <label>Start date</label>
                                     <input type="text" class="datepicker" name="date">

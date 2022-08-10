@@ -54,7 +54,28 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%; */
 }
+/* submit-gear button in search.handlebars */
+.submit-button{
+   display:flex;
+   justify-content: center;
+}
+
+.gear-request {
+    display:flex;
+    flex-direction: row;
+}
+
+.small-form{
+    width: 70%;
+    margin: auto;
+}
+
 /* gearCache.handlebars */
 #gear-cache{
     font-family: 'Amatic SC', cursive;
@@ -64,13 +85,20 @@ body {
 /* addGear.handlebars and profile.handlebars */
 .fade-out {
         animation-name: example;
-        animation-duration: 10s;
+        animation-duration: 6s;
         animation-fill-mode: forwards;
       }
 
-    @keyframes example {
-        from {opacity: 2;}
-        to {opacity: 0;}
+      @keyframes example {
+        0% {opacity: 2;}
+        50% {opacity: 1;}
+        100% {opacity:0;}
+    }
+
+    /* gear-card in search.handlebars */
+    .gear-card{
+        margin-left: 5vh;
+        margin-right: 5vh;
     }
 
 #form-font{
@@ -118,6 +146,25 @@ footer {
         font-size: medium;
         /* font-size:2vh; */
     }
+.submit-button{
+    font-size:10px;
+}
+
+.gear-card{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.small-form h4{
+    font-size: 1.5rem;
+
+}
+
+.small-form h5{
+    font-size: 1.5rem;
+
+}
+.card-image
 /* placeholder not reactive yet */
     #placeholder{
         font-size: 2rem;
@@ -128,23 +175,6 @@ footer {
     }
 }
 
-/* .fill-view {
-    min-height: calc(100vh);
-} */
+@media screen and (max-width:576px) {
 
-/* @media #{$small-and-down} {
-    // styles for small screens and down
-  }
-  @media #{$medium-and-up} {
-    // styles for medium screens and larger
-  }
-  @media #{$medium-and-down} {
-    // styles for medium screens and down
-  }
-  @media #{$large-and-up} {
-    // styles for large screens and up
-  }
-  @media #{$extra-large-and-up} {
-    // styles for extra large screens and up
-  }
-           */
+}

@@ -1,23 +1,51 @@
 [
   {
-    "name": "Joe",
+    "name": "John Muir",
     "user_location": "Seattle, WA",
-    "email": "joe@joe.joe",
+    "email": "john@john.com",
     "password": "password",
-    "gear_id":"1"
+    "gear_id":[]
   },
   {
-    "name": "Lernantino",
+    "name": "Sophia Danenberg",
     "user_location": "Seattle, WA",
-    "email": "lernantino@gmail.com",
+    "email": "hdt@gmail.com",
     "password": "password12345",
-    "gear_id":"1"
+    "gear_id":[]
   },
   {
-    "name": "Amiko",
+    "name": "Cheryl Strayed",
     "user_location": "Seattle, WA",
-    "email": "amiko2k20@aol.com",
+    "email": "Chery@aol.com",
     "password": "password12345",
-    "gear_id":"2"
+    "gear_id":[]
+  },
+  {
+    "name": "Kristen Santee",
+    "user_location": "Tacoma, WA",
+    "email": "kristen.l.santee@gmail.com",
+    "password": "password12345",
+    "gear_id":[1,11,5,7,14]
+  },
+  {
+    "name": "Stevie Gomez",
+    "user_location": "Seattle, WA",
+    "email": "stevie@aol.com",
+    "password": "password12345",
+    "gear_id":[6,7,8,15]
+  },
+  {
+    "name": "Josh Lee",
+    "user_location": "Renton, WA",
+    "email": "josh@aol.com",
+    "password": "password12345",
+    "gear_id":[3,4,12,13]
+  },
+  {
+    "name": "Leslie Saucedo",
+    "user_location": "Auburn, WA",
+    "email": "leslie0@aol.com",
+    "password": "password12345",
+    "gear_id":[2,9,10]
   }
 ]

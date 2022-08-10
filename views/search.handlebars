@@ -1,11 +1,14 @@
 <main>
 
-    <div class="center container">
+    <div class="container center">
 
-        <br><br>
+        <div>
+            <h4 class="accent-font orange-text">{{msg}}</h4>
+        </div>
+        <br>
 {{!-- DROPDOWN TRIGGER FOR CATEGORIES --}}
         <div>
-            
+
             <a class="card-radius dropdown-trigger btn btn-large deep-purple lighten-2" href="#" data-target="dropdown2"
                 id="accent-font">what category of gear are you looking for?<i
                     class="material-icons right">expand_more</i></a>
@@ -25,8 +28,8 @@
                 <li><a href="/search/11">Kayaking</a></li>
             </ul>
         </div>
-{{!-- COLLAPSIBLE CARD CONTENTS OF SEARCH RESULTS --}}
-        <ul class="collapsible popout">
+        {{!-- COLLAPSIBLE CARD CONTENTS OF SEARCH RESULTS --}}
+        <ul class="collapsible">
             {{#each gears}}
             <li>
                 <div class="collapsible-header card horizontal card-radius">
@@ -34,9 +37,11 @@
                         <img src="{{image}}" alt="Gear Image">
                     </div>
                     <div class="card-stacked">
-                        <div class="card-content indigo-text">
+                        <div class="card-content indigo-text left-align gear-card">
                             <ul>
                                 <li>Gear Id: {{id}}</li>
+                                <li class="divider" tabindex="-1"></li>
+                                <li>Gear Owner: {{user.name}}</li>
                                 <li class="divider" tabindex="-1"></li>
                                 <li>Category : {{category.category_name}}</li>
                                 <li class="divider" tabindex="-1"></li>
@@ -44,28 +49,43 @@
                                 <li class="divider" tabindex="-1"></li>
                                 <li>Description: {{description}}</li>
                                 <li class="divider" tabindex="-1"></li>
-                                <li>Date Added: {{date_created}} {{user.name}}</li>
+                                <li>Date Added: {{date_created}}</li>
                                 <li class="divider" tabindex="-1"></li>
                                 <li class="divider" tabindex="-1"></li>
                             </ul>
                             <br>
-                             <button class="btn waves-effect waves-light right orange" type="submit" name="action"><i class="material-icons right">check_box</i> Request gear</button>
+                            <button class="btn waves-effect waves-light right orange submit-button" type="submit"
+                                name="action"><i class="material-icons right hide-on-med-and-down">check_box</i> Request
+                                gear</button>
                         </div>
                     </div>
                 </div>
-                <div class="collapsible-body white">
-                    <div><a class="waves-effect waves-light btn red right"><i class="material-icons text-white close-collapsible">close</i></a></div>
-                        {{msg}}
+                <div class="collapsible-body indigo lighten-5 card-radius small-form center">
+                    <div class="row">
+                        <div class="">
+                            <div><a class="waves-effect waves-light btn red right"><i class="material-icons text-white close-collapsible">close</i></a></div>
                         <h4>Gear Request Form</h4>
                             <p>Please complete the form below to request this gear item. Please include a detailed message and the date you would like to pick up the gear. Then check your email for a response from the gear owner to connect with the gear!</p>
                     <div class="container">
-                        <form action="send" method="post" id="email-btn">
+                        <form class="requestform" action="send" method="post" id="email-btn">
                             <div class="container">
-                                <h5>Gear for: {{user.name}}</h5>
+                                {{!-- <h5>Gear for: {{user.name}}</h5>
                                 <h6>Gear ID: {{id}}</h6>
                                     <div class="card-image">
                                         <img src="{{image}}" alt="Gear Image">
-                                    </div>
+                                    </div> --}}
+                                <p>
+                                    <label class="active">Your Name:</label>
+                                    <input name="name" class=" active">
+                                </p>
+                                <p>
+                                    <label class="active">Requesting Gear ID:</label>
+                                    <input name="gear" class=" active" value="{{id}} {{name}}">
+                                </p>
+                                <p>
+                                    <label class="active">Your Email:</label>
+                                    <input name="email" class=" active" value="{{email}}">
+                                </p>
                                 <p>
                                     <label>Start date</label>
                                     <input type="text" class="datepicker" name="date">
@@ -73,6 +93,10 @@
                                 <p>
                                     <label class="active">Message</label>
                                     <textarea name="message" class="materialize-textarea active" rows="5"></textarea>
+                                </p>
+                                <p hidden>
+                                    <label></label>
+                                    <input type="text" class="datepicker" name="owneremail" value="{{user.email}}">
                                 </p>
                             </div>
                                 <div class="container">

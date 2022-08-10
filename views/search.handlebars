@@ -77,8 +77,12 @@
                                     <input name="name" class=" active">
                                 </p>
                                 <p>
+                                    <label class="active">Requesting Gear ID:</label>
+                                    <input name="gear" class=" active" value="{{id}} {{name}}">
+                                </p>
+                                <p>
                                     <label class="active">Your Email:</label>
-                                    <input name="email" class=" active">
+                                    <input name="email" class=" active" value="{{email}}">
                                 </p>
                                 <p>
                                     <label>Start date</label>
@@ -87,6 +91,10 @@
                                 <p>
                                     <label class="active">Message</label>
                                     <textarea name="message" class="materialize-textarea active" rows="5"></textarea>
+                                </p>
+                                <p hidden>
+                                    <label></label>
+                                    <input type="text" class="datepicker" name="owneremail" value="{{user.email}}">
                                 </p>
                             </div>
                                 <div class="container">

@@ -47,22 +47,26 @@ app.post("/send", async (req,res) => {
   })
 
   let message = {
-    name1:req.session.user_name,
+    gear:req.body.gear,
     name:req.body.name,
     email:req.body.email,
     date:req.body.date,
     message:req.body.message
   };
 
+  let gearOwner = {
+    ownerEmail:req.body.owneremail
+  }
+
   await transport.sendMail({
-    from: process.env.MAIL_FROM,
-    to: 'kristen.l.santee@gmail.com', //this will have to be a template literal
+    from: 'outboundgearexchange@hotmail.com',
+    to: `${gearOwner.ownerEmail}`,//this will have to be a template literal
     subject: 'Gear Request',
     // text: 'Hello?',
     html: `
     <p>You have a new gear request from ${message.name}.</p>
     <br>
-    <p>${message.name} would like to request some gear from your cache starting on ${message.date}.</p>
+    <p>${message.name} would like to request Gear ID: ${message.gear} from your cache starting on ${message.date}.</p>
     <br>
     <p>Their message is included below:
     <br>

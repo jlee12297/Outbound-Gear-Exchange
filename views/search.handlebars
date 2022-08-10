@@ -1,6 +1,6 @@
 <main>
 
-    <div class="center container">
+    <div class="container center">
 
         <div>
             <h4 class="accent-font orange-text">{{msg}}</h4>
@@ -8,7 +8,7 @@
         <br>
 {{!-- DROPDOWN TRIGGER FOR CATEGORIES --}}
         <div>
-            
+
             <a class="card-radius dropdown-trigger btn btn-large deep-purple lighten-2" href="#" data-target="dropdown2"
                 id="accent-font">what category of gear are you looking for?<i
                     class="material-icons right">expand_more</i></a>
@@ -28,9 +28,8 @@
                 <li><a href="/search/11">Kayaking</a></li>
             </ul>
         </div>
-
-{{!-- COLLAPSIBLE CARD CONTENTS OF SEARCH RESULTS --}}
-        <ul class="collapsible popout">
+        {{!-- COLLAPSIBLE CARD CONTENTS OF SEARCH RESULTS --}}
+        <ul class="collapsible">
             {{#each gears}}
             <li>
                 <div class="collapsible-header card horizontal card-radius">
@@ -38,7 +37,7 @@
                         <img src="{{image}}" alt="Gear Image">
                     </div>
                     <div class="card-stacked">
-                        <div class="card-content indigo-text">
+                        <div class="card-content indigo-text left-align gear-card">
                             <ul>
                                 <li>Gear Id: {{id}}</li>
                                 <li class="divider" tabindex="-1"></li>
@@ -53,12 +52,16 @@
                                 <li class="divider" tabindex="-1"></li>
                             </ul>
                             <br>
-                             <button class="btn waves-effect waves-light right orange" type="submit" name="action"><i class="material-icons right">check_box</i> Request gear</button>
+                            <button class="btn waves-effect waves-light right orange submit-button" type="submit"
+                                name="action"><i class="material-icons right hide-on-med-and-down">check_box</i> Request
+                                gear</button>
                         </div>
                     </div>
                 </div>
-                <div class="collapsible-body white">
-                    <div><a class="waves-effect waves-light btn red right"><i class="material-icons text-white close-collapsible">close</i></a></div>
+                <div class="collapsible-body indigo lighten-5 card-radius small-form center">
+                    <div class="row">
+                        <div class="">
+                            <div><a class="waves-effect waves-light btn red right"><i class="material-icons text-white close-collapsible">close</i></a></div>
                         <h4>Gear Request Form</h4>
                             <p>Please complete the form below to request this gear item. Please include a detailed message and the date you would like to pick up the gear. Then check your email for a response from the gear owner to connect with the gear!</p>
                     <div class="container">

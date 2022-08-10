@@ -41,21 +41,26 @@ app.post("/send", async (req,res) => {
     port: process.env.MAIL_PORT,
     secure: false,
     auth: {
-        user: MAIL_USER,
-        pass: MAIL_PASS,
+        user: 'outboundgearexchange@hotmail.com',
+        pass: 'Gear4Lyfe!',
     }
   })
 
   let message = {
+    gear:req.body.gear,
     name:req.body.name,
     email:req.body.email,
     date:req.body.date,
     message:req.body.message
   };
 
+  let gearOwner = {
+    ownerEmail:req.body.owneremail
+  }
+
   await transport.sendMail({
-    from: process.env.MAIL_FROM,
-    to: process.env.MAIL_USER, //this will have to be a template literal
+    from: 'outboundgearexchange@hotmail.com',
+    to: `${gearOwner.ownerEmail}`,//this will have to be a template literal
     subject: 'Gear Request',
     // text: 'Hello?',
     html: `

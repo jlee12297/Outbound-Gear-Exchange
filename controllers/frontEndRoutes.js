@@ -105,7 +105,9 @@ router.get("/search/:id",(req,res)=>{
 
 
 router.get("/gears/:id",(req,res)=>{
-    Gear.findByPk(req.params.id).then(gearData=>{
+    Gear.findByPk(req.params.id,{
+         include:[User,Category]
+    }).then(gearData=>{
         const hbsData = gearData.toJSON();
         hbsData.logged_in=req.session.logged_in
         res.render("singleGear",hbsData)
